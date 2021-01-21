@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleShip</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="function.js"></script>
+</head>
+<body>
+    <center>
+        <img src="images/battleship.png" alt="" style="display: inline-block; height: 60px; width: auto;">
+        <img src="images/ai.png" alt="" style="height: 50px; margin-left: 10px; margin-bottom: 2px;">
+        <br>
+        <p id="instr" onclick="instructions()">Instructions</p>
+        <a href="#sdown"><img src="images/start.png" alt="" style="display: inline-block; height: 40px; width: auto;" onclick="start()"></a>
+        &nbsp;
+        <a href="index.html"><img src="images/reset.png" alt="" style="display: inline-block; height: 40px; width: auto;"></a>
+        <br><br>
+    <table id="sdown">
+        <tr>
+            <td style="border: 10px solid #ec5858; padding: 10px; border-radius: 10px;">
+                <center>
+                    <p id="ophead">Opponent</p>
+                    <div id="opponent"></div>
+                </center>
+            </td>
+            <td style="border: 10px solid #81b214; padding: 10px; border-radius: 10px;">
+                <center>
+                    <p id="playerhead">Player</p>
+                    <div id="player"></div>
+                </center>
+            </td>
+        </tr>
+    </table>
+    </center>
+    <script src="function.js"></script>
+</body>
+</html>

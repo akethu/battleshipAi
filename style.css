@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/dfe1003cb4164da07a5b072caef96131.jpg');
+}
+
+#ophead {
+    /* background-color: #ec5858; */
+    border: solid white;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    padding-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#playerhead {
+    /* background-color: #f58634; */
+    border: solid white;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: max-content;
+    height: 30px;
+    padding-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.plain {
+    background-color: #eff8ff;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 1px;
+}
+
+.plain:hover {
+    background-color: gray;
+}
+
+#instr {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    border: 2px solid beige;
+    border-radius: 10px;
+    color: white;
+    width: max-content;
+    padding: 5px;
+    background-color: transparent;
+}
+
+#instr:hover {
+    background-color:snow;
+    color: black;
+}
+
+.sea {
+    background-color: #51c2d5;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 1px;
+}
+
+.hit {
+    background-color: #ef4f4f;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 1px;
+}
+
+.boat {
+    background-color: #ffb26b;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    border-radius: 2px;
+    margin: 1px;
+}
