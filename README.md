@@ -10,7 +10,7 @@ Link: https://akethu.github.io/battleshipAi/
 
 On clicking 'Start', the ships are set up automatically for both the opponent and yourself. Once done you can start playing right away. 
 Clicking on the white spaces in the opponent's region will drop a bomb at that location. If it's a hit, then the space will turn red, if not, it'll turn blue.
-The opponent subsequently attacks you randomly, yet strategically. Beat the opponent by destroying the 5 different sized ships.
+The opponent subsequently attacks you randomly, yet strategically. Beat the opponent by destroying the 5 (differently sized) ships.
 
 ## Current Highlights
 
