@@ -23,7 +23,7 @@ Main features of Battleship Ai:
 
 ## Upcoming Features
 
-Apart from the above highlights, I am soon to make the game even more awesome with the following features:
+Apart from the above highlights, I am soon to make the game even more enjoyable with the following features:
 
 - Mobile compatibility.
 - Manual placement of ships.
