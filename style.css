@@ -83,3 +83,15 @@ body {
     border-radius: 2px;
     margin: 1px;
 }
+
+#gameplay {
+    background-color: beige;
+    color: darkslategrey;
+    border: solid black;
+    display: none;
+    border-radius: 10px;
+    width: max-content;
+    padding: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
