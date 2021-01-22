@@ -265,8 +265,8 @@ function bomb() {
     var b = Math.floor(Math.random() * 10);
     if(playerZone[a][b] === 1) {
         playerZone[a][b] = 2;
-        document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
         oppScore++;
+        document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
         draw();
         tempA = a;
         tempB = b;
@@ -288,8 +288,8 @@ function hitRecur() {
     var y = tempB + guide[rand][1];
     if((x <= 9) || (x >= 0) || (y <= 9) || (y >= 0)) {
         if(playerZone[x][y] === 1) {
-            document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
             oppScore++;
+            document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
             playerZone[x][y] = 2;
             tempA = x;
             tempB = y;
