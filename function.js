@@ -61,6 +61,8 @@ function start() {
     }
     var name = prompt("What's your name Captain?", 'Adi');
     document.getElementById('playerhead').innerHTML = name + "'s Battleground";
+    document.getElementById('gameplay').style.display = "block";
+    document.getElementById('gameplay').innerHTML = "Let's begin! Your turn..";
     playerSetUp();
     opponentSetUp();
     checker();
@@ -238,18 +240,20 @@ function button(y,x) {
         if(opponentZone[y][x] === 1) {
             opponentZone[y][x] = 2;
             playerScore++;
-            alert("It's a hit!");
+            document.getElementById('gameplay').innerHTML = "It's a hit!" + "(" + playerScore + ")";
             draw();
         }
         else {
+            document.getElementById('gameplay').innerHTML = "Opponent's turn..";
             opponentZone[y][x] = 3;
             control = 1;
             draw();
             bombTime = setInterval('bomb()', 400);
         }  
     }
-    console.log(oppScore);
-    console.log(playerScore);
+    else {
+        document.getElementById('gameplay').innerHTML = "Wait..";
+    }
 }
 
 var tempA = 0;
@@ -261,7 +265,7 @@ function bomb() {
     var b = Math.floor(Math.random() * 10);
     if(playerZone[a][b] === 1) {
         playerZone[a][b] = 2;
-        alert('You got hit!');
+        document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
         oppScore++;
         draw();
         tempA = a;
@@ -270,6 +274,7 @@ function bomb() {
         time = setInterval("hitRecur()", 400);
     }
     else if (playerZone[a][b] === 3){
+        document.getElementById('gameplay').innerHTML = "Your turn..";
         playerZone[a][b] = 0;
         control = 0;
         draw();
@@ -283,7 +288,7 @@ function hitRecur() {
     var y = tempB + guide[rand][1];
     if((x <= 9) || (x >= 0) || (y <= 9) || (y >= 0)) {
         if(playerZone[x][y] === 1) {
-            alert('You got hit!');
+            document.getElementById('gameplay').innerHTML = "You got hit!" + "(" + oppScore + ")";
             oppScore++;
             playerZone[x][y] = 2;
             tempA = x;
@@ -291,6 +296,7 @@ function hitRecur() {
             draw();
         }
         else if (playerZone[x][y] !== 1 && playerZone[x][y] !== 2){
+            document.getElementById('gameplay').innerHTML = "Your turn..";
             playerZone[x][y] = 0;
             draw();
             control = 0;
@@ -303,11 +309,11 @@ var scoreCheck = setInterval("scoreChecker()", 1000);
 
 function scoreChecker() {
     if(playerScore == 15) {
-        alert('You won! Click on Restart to refresh.');
+        document.getElementById('gameplay').innerHTML = "You won! Click on 'Restart' to refresh.";
         clearInterval(scoreCheck);
     }
     if(opponentScore == 15) {
-        alert('The AI won :( Click on Restart to refresh.');
+        document.getElementById('gameplay').innerHTML = "The AI won :( Click on 'Restart' to refresh.";
         clearInterval(scoreCheck);
     }
 }
